@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keep Notes</title>
+  
+</head>
+<body>
+  <header>
+    <h1>My Notes</h1>
+  </header>
+  <main>
+    <ul class="notes-list">
+      {% for note in notes %}
+      <li class="note">
+        <a href="/note/{{ note._id }}">- {{ note.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="/new" class="new-note-button">Create New Note</a>
+  </main>
+</body>
+</html>
